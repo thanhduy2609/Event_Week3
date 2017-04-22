@@ -79,7 +79,8 @@ class EventTableViewController: UITableViewController {
         valueTitleToPass = (currentCell.lblTitle?.text)!
         valueAddressToPass = (currentCell.lblAddress?.text)!
         
-        performSegue(withIdentifier: "showDetail", sender: self)
+       // prepareForSegue(segue: , sender: <#T##AnyObject?#>)
+        //performSegue(withIdentifier: "showDetail", sender: self)
     }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
@@ -88,7 +89,7 @@ class EventTableViewController: UITableViewController {
             // initialize new view controller and cast it as your view controller
             let viewController = segue.destination as! DetailEventViewController
             // your new view controller should have property that will store passed value
-            viewController.lblAddress?.text = valueAddressToPass
+            viewController.lblAddress?.text = "HAHA"
             viewController.lblDes?.text = valueAddressToPass
             viewController.lblTitle?.text = valueTitleToPass
         }
