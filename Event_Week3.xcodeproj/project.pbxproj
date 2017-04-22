@@ -14,6 +14,11 @@
 		F718C1E91EAB3B40009C449D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F718C1E71EAB3B40009C449D /* LaunchScreen.storyboard */; };
 		F718C1F41EAB3B40009C449D /* Event_Week3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C1F31EAB3B40009C449D /* Event_Week3Tests.swift */; };
 		F718C1FF1EAB3B41009C449D /* Event_Week3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C1FE1EAB3B41009C449D /* Event_Week3UITests.swift */; };
+		F718C2141EAB3CB2009C449D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C2131EAB3CB2009C449D /* Event.swift */; };
+		F718C2161EAB3DE1009C449D /* EventInDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C2151EAB3DE1009C449D /* EventInDay.swift */; };
+		F718C2191EAB45B9009C449D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C2181EAB45B9009C449D /* EventCell.swift */; };
+		F718C21B1EAB4692009C449D /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C21A1EAB4692009C449D /* EventTableViewController.swift */; };
+		F718C21D1EAB52E7009C449D /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718C21C1EAB52E7009C449D /* DetailEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		F718C1FA1EAB3B41009C449D /* Event_Week3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Event_Week3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F718C1FE1EAB3B41009C449D /* Event_Week3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event_Week3UITests.swift; sourceTree = "<group>"; };
 		F718C2001EAB3B41009C449D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F718C2131EAB3CB2009C449D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F718C2151EAB3DE1009C449D /* EventInDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInDay.swift; sourceTree = "<group>"; };
+		F718C2181EAB45B9009C449D /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		F718C21A1EAB4692009C449D /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		F718C21C1EAB52E7009C449D /* DetailEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,8 @@
 		F718C1DD1EAB3B40009C449D /* Event_Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				F718C2171EAB44CC009C449D /* Controllers */,
+				F718C20D1EAB3BEF009C449D /* Model */,
 				F718C1DE1EAB3B40009C449D /* AppDelegate.swift */,
 				F718C1E01EAB3B40009C449D /* ViewController.swift */,
 				F718C1E21EAB3B40009C449D /* Main.storyboard */,
@@ -123,6 +135,25 @@
 				F718C2001EAB3B41009C449D /* Info.plist */,
 			);
 			path = Event_Week3UITests;
+			sourceTree = "<group>";
+		};
+		F718C20D1EAB3BEF009C449D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F718C2131EAB3CB2009C449D /* Event.swift */,
+				F718C2151EAB3DE1009C449D /* EventInDay.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F718C2171EAB44CC009C449D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F718C2181EAB45B9009C449D /* EventCell.swift */,
+				F718C21A1EAB4692009C449D /* EventTableViewController.swift */,
+				F718C21C1EAB52E7009C449D /* DetailEventViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +224,7 @@
 				TargetAttributes = {
 					F718C1DA1EAB3B40009C449D = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					F718C1EE1EAB3B40009C449D = {
@@ -260,6 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F718C1E11EAB3B40009C449D /* ViewController.swift in Sources */,
+				F718C2141EAB3CB2009C449D /* Event.swift in Sources */,
+				F718C2191EAB45B9009C449D /* EventCell.swift in Sources */,
+				F718C21D1EAB52E7009C449D /* DetailEventViewController.swift in Sources */,
+				F718C2161EAB3DE1009C449D /* EventInDay.swift in Sources */,
+				F718C21B1EAB4692009C449D /* EventTableViewController.swift in Sources */,
 				F718C1DF1EAB3B40009C449D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +451,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Event_Week3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itute.Event-Week3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Event_Week3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itute.Event-Week3";
