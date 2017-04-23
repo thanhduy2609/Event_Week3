@@ -10,15 +10,11 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
 
-    var valueTitleToPass: String = ""
-    var valueDesToPass: String = ""
-    var valueAddressToPass: String = ""
     
     //get all event in day
-    var eventInDays :[EventInDay]{
+    lazy var eventInDays: [EventInDay] = {
         return EventInDay.eventInDays()
-    }
-    
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +22,9 @@ class EventTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         self.navigationItem.rightBarButtonItem = editButtonItem
+        //tableView.estimatedRowHeight = tableView.rowHeight
+        //tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,82 +61,53 @@ class EventTableViewController: UITableViewController {
         let eventInDay = eventInDays[indexPath.section];
         //get event by row
         let event = eventInDay.events[indexPath.row];
-        cell.lblTitle?.text = event.title
-        cell.lblDescription?.text = event.description
-        cell.lblAddress?.text = event.address
+        cell.configCellWith(event: event)
         return cell
     }
-    
-    //xảy ra khi click vào 1 item
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow;
-        let currentCell = tableView.cellForRow(at: indexPath!) as! EventCell
-        
-    
-        valueDesToPass = String((currentCell.lblDescription?.text)!)
-        valueTitleToPass = (currentCell.lblTitle?.text)!
-        valueAddressToPass = (currentCell.lblAddress?.text)!
-        
-       // prepareForSegue(segue: , sender: <#T##AnyObject?#>)
-        //performSegue(withIdentifier: "showDetail", sender: self)
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showDetail") {
             // initialize new view controller and cast it as your view controller
             let viewController = segue.destination as! DetailEventViewController
-            // your new view controller should have property that will store passed value
-            viewController.lblAddress?.text = "HAHA"
-            viewController.lblDes?.text = valueAddressToPass
-            viewController.lblTitle?.text = valueTitleToPass
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                viewController.event = eventAtIndexPath(indexPath: indexPath as NSIndexPath)
+            }
+            
+        }
+    }
+    
+    // get event by indexPath
+    func eventAtIndexPath(indexPath: NSIndexPath) -> Event{
+        let eventInDay = eventInDays[indexPath.section];
+        return eventInDay.events[indexPath.row];
+        
+    }
+    
+    //delete by swipe
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete){
+            let eventInDay = eventInDays[indexPath.section];
+            eventInDay.events.remove(at: indexPath.row)
+            //update table view with new data source
+            //tableView.reloadData() bad ways
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
 
-   
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    //sort 
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //get data in sourceIndexPath
+        let eventInDay = eventInDays[sourceIndexPath.section];
+        let event = eventInDay.events[sourceIndexPath.row];
+        //remove data at souceIndex
+        eventInDay.events.remove(at: sourceIndexPath.row)
+        //get data in desIndexPath
+        let eventInDayDes = eventInDays[destinationIndexPath.section];
+        //update data
+        eventInDayDes.events.insert(event, at: destinationIndexPath.row);
+        
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

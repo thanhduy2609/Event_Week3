@@ -88,43 +88,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ex-Fy-Bee">
-                                <rect key="frame" x="10" y="210" width="355" height="36"/>
+                                <rect key="frame" x="10" y="208" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJT-IO-va0">
-                                <rect key="frame" x="10" y="256" width="355" height="36"/>
+                                <rect key="frame" x="10" y="248.5" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKI-op-AW2">
-                                <rect key="frame" x="10" y="164" width="355" height="36"/>
+                                <rect key="frame" x="10" y="152" width="355" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dye-Tk-GXX">
+                                <rect key="frame" x="10" y="74" width="355" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="width" secondItem="XKI-op-AW2" secondAttribute="width" id="526-bP-PAz"/>
-                            <constraint firstAttribute="trailing" secondItem="tJT-IO-va0" secondAttribute="trailing" constant="10" id="5wj-gK-V4i"/>
-                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="height" secondItem="XKI-op-AW2" secondAttribute="height" id="Ae3-gB-wWX"/>
-                            <constraint firstItem="tJT-IO-va0" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="Ae9-St-nfm"/>
-                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="top" secondItem="XKI-op-AW2" secondAttribute="bottom" constant="10" id="DzT-Ho-t2p"/>
-                            <constraint firstAttribute="trailing" secondItem="7Ex-Fy-Bee" secondAttribute="trailing" constant="10" id="W8Y-gq-9V4"/>
-                            <constraint firstItem="XKI-op-AW2" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="WGK-ZB-G7v"/>
-                            <constraint firstItem="tJT-IO-va0" firstAttribute="height" secondItem="XKI-op-AW2" secondAttribute="height" id="XUg-H9-pud"/>
-                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="aLy-vF-ahz"/>
-                            <constraint firstItem="tJT-IO-va0" firstAttribute="width" secondItem="XKI-op-AW2" secondAttribute="width" id="j7F-eE-5ly"/>
-                            <constraint firstItem="XKI-op-AW2" firstAttribute="top" secondItem="Cqp-Ud-cCM" secondAttribute="bottom" constant="100" id="mY3-Vg-RXy"/>
-                            <constraint firstAttribute="trailing" secondItem="XKI-op-AW2" secondAttribute="trailing" constant="10" id="obY-Cd-Ct8"/>
-                            <constraint firstItem="tJT-IO-va0" firstAttribute="top" secondItem="7Ex-Fy-Bee" secondAttribute="bottom" constant="10" id="q6v-7U-L7W"/>
+                            <constraint firstItem="tJT-IO-va0" firstAttribute="top" secondItem="7Ex-Fy-Bee" secondAttribute="bottom" constant="20" id="63c-oF-Heb"/>
+                            <constraint firstItem="tJT-IO-va0" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="BBd-GK-Sfe"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ex-Fy-Bee" secondAttribute="trailing" constant="10" id="BhS-eC-Kh6"/>
+                            <constraint firstAttribute="trailing" secondItem="dye-Tk-GXX" secondAttribute="trailing" constant="10" id="CHh-c0-16l"/>
+                            <constraint firstItem="XKI-op-AW2" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="DVb-BY-uMv"/>
+                            <constraint firstAttribute="trailing" secondItem="XKI-op-AW2" secondAttribute="trailing" constant="10" id="OHP-Jl-vdJ"/>
+                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="top" secondItem="XKI-op-AW2" secondAttribute="bottom" constant="20" id="QKd-fS-T15"/>
+                            <constraint firstItem="7Ex-Fy-Bee" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="XDk-eC-wgq"/>
+                            <constraint firstAttribute="trailing" secondItem="tJT-IO-va0" secondAttribute="trailing" constant="10" id="ZVV-qz-NPw"/>
+                            <constraint firstItem="XKI-op-AW2" firstAttribute="top" secondItem="dye-Tk-GXX" secondAttribute="bottom" constant="30" id="dku-Pd-LZT"/>
+                            <constraint firstItem="dye-Tk-GXX" firstAttribute="leading" secondItem="ZBn-Kd-4vc" secondAttribute="leading" constant="10" id="go9-PV-ghn"/>
+                            <constraint firstItem="dye-Tk-GXX" firstAttribute="top" secondItem="Cqp-Ud-cCM" secondAttribute="bottom" constant="10" id="hHL-G5-tDd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lblAddress" destination="tJT-IO-va0" id="BVB-i9-bZc"/>
+                        <outlet property="lblDay" destination="dye-Tk-GXX" id="kHi-uO-jar"/>
                         <outlet property="lblDes" destination="7Ex-Fy-Bee" id="AZr-C8-Qil"/>
                         <outlet property="lblTitle" destination="XKI-op-AW2" id="F5V-DN-nqw"/>
                     </connections>
