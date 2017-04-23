@@ -71,6 +71,7 @@ class EventTableViewController: UITableViewController {
             let viewController = segue.destination as! DetailEventViewController
             if let indexPath = self.tableView.indexPathForSelectedRow{
                 viewController.event = eventAtIndexPath(indexPath: indexPath as NSIndexPath)
+                viewController.dayEvent = dayAtIndexPath(indexPath: indexPath as NSIndexPath)
             }
             
         }
@@ -80,6 +81,12 @@ class EventTableViewController: UITableViewController {
     func eventAtIndexPath(indexPath: NSIndexPath) -> Event{
         let eventInDay = eventInDays[indexPath.section];
         return eventInDay.events[indexPath.row];
+        
+    }
+    
+    func dayAtIndexPath(indexPath: NSIndexPath) -> String{
+        let eventInDay = eventInDays[indexPath.section];
+        return eventInDay.day;
         
     }
     

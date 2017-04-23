@@ -14,10 +14,10 @@ class DetailEventViewController: UIViewController {
     @IBOutlet weak var lblDay: UILabel!
     @IBOutlet weak var lblDes: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
-    
     @IBOutlet weak var lblAddress: UILabel!
 
     var event: Event?
+    var dayEvent: String?
     
     
     override func viewDidLoad() {
@@ -26,5 +26,6 @@ class DetailEventViewController: UIViewController {
         lblDes.text = event?.description
         lblTitle.text = event?.title
         lblAddress.text = event?.address
+        lblDay.text = dayEvent;
     }
 }

@@ -12,11 +12,13 @@ class Event{
     var title: String
     var description: String
     var address: String
+
     
     init(title: String, description: String, address: String){
         self.title = title;
         self.description = description;
         self.address = address;
     }
+    
     
 }
